@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Always run
+echo "Run"
+exit 0

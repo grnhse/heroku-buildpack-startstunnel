@@ -1,0 +1,14 @@
+#!/bin/bash
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+ENV_DIR=$3
+
+CONFIG_FILE=$BUILD_DIR/config/stunnel.conf
+STUNNEL_EXEC="${BUILD_DIR}/vendor/stunnel/bin/stunnel"
+
+CMD="$STUNNEL_EXEC $CONFIG_FILE"
+
+echo "-----> Starting stunnel"
+echo "       $CMD"
+$CMD &
